@@ -131,6 +131,11 @@ public class RegistroPrincipal extends javax.swing.JFrame {
         menuConcierto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         itemIngresarConcierto.setText("Ingresar datos...");
+        itemIngresarConcierto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemIngresarConciertoActionPerformed(evt);
+            }
+        });
         menuConcierto.add(itemIngresarConcierto);
 
         itemEditarConcierto.setText("Editar datos...");
@@ -176,6 +181,11 @@ public class RegistroPrincipal extends javax.swing.JFrame {
         menuEscenario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         itemIngresarEscenario.setText("Ingresar datos...");
+        itemIngresarEscenario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemIngresarEscenarioActionPerformed(evt);
+            }
+        });
         menuEscenario.add(itemIngresarEscenario);
 
         itemEditarEscenario.setText("Editar datos...");
@@ -224,6 +234,11 @@ public class RegistroPrincipal extends javax.swing.JFrame {
         menuEspectador.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         itemIngresarEspectador.setText("Ingresar datos...");
+        itemIngresarEspectador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemIngresarEspectadorActionPerformed(evt);
+            }
+        });
         menuEspectador.add(itemIngresarEspectador);
 
         itemEditarEspectador.setText("Editar datos...");
@@ -269,6 +284,11 @@ public class RegistroPrincipal extends javax.swing.JFrame {
         menuFestival.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         itemIngresarFestival.setText("Ingresar datos...");
+        itemIngresarFestival.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemIngresarFestivalActionPerformed(evt);
+            }
+        });
         menuFestival.add(itemIngresarFestival);
 
         itemEditarFestival.setText("Editar datos...");
@@ -416,6 +436,38 @@ public class RegistroPrincipal extends javax.swing.JFrame {
         
         registro.setVisible(true);
     }//GEN-LAST:event_itemIngresarArtistaActionPerformed
+
+    private void itemIngresarConciertoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemIngresarConciertoActionPerformed
+        RegistroConcierto registro = new RegistroConcierto(this, true);
+        
+        registro.setLocationRelativeTo(this);
+        
+        registro.setVisible(true);
+    }//GEN-LAST:event_itemIngresarConciertoActionPerformed
+
+    private void itemIngresarEscenarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemIngresarEscenarioActionPerformed
+        RegistroEscenario registro = new RegistroEscenario(this, true);
+        
+        registro.setLocationRelativeTo(this);
+        
+        registro.setVisible(true);
+    }//GEN-LAST:event_itemIngresarEscenarioActionPerformed
+
+    private void itemIngresarEspectadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemIngresarEspectadorActionPerformed
+        RegistroEspectador registro = new RegistroEspectador(this, true);
+        
+        registro.setLocationRelativeTo(this);
+        
+        registro.setVisible(true);
+    }//GEN-LAST:event_itemIngresarEspectadorActionPerformed
+
+    private void itemIngresarFestivalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemIngresarFestivalActionPerformed
+        RegistroFestival registro = new RegistroFestival(this, true);
+        
+        registro.setLocationRelativeTo(this);
+        
+        registro.setVisible(true);
+    }//GEN-LAST:event_itemIngresarFestivalActionPerformed
 
     /**
      * @param args the command line arguments

@@ -80,6 +80,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ingresar datos..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemIngresarConciertoActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itemEditarConcierto">
               <Properties>
@@ -136,6 +139,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ingresar datos..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemIngresarEscenarioActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itemEditarEscenario">
               <Properties>
@@ -197,6 +203,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ingresar datos..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemIngresarEspectadorActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itemEditarEspectador">
               <Properties>
@@ -253,6 +262,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ingresar datos..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemIngresarFestivalActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itemEditarFestival">
               <Properties>
