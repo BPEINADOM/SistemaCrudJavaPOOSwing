@@ -305,9 +305,9 @@ public class RegistroConcierto extends javax.swing.JDialog {
     }//GEN-LAST:event_botonEliminarActionPerformed
 
     public void limpiarCampos() {
-        campoNombre.setText(" ");
-        campoDuracion.setText(" ");
-        campoEscenario.setText(" ");
+        campoNombre.setText("");
+        campoDuracion.setText("");
+        campoEscenario.setText("");
         botonEditar.setEnabled(false);
         botonEliminar.setEnabled(false);
     }

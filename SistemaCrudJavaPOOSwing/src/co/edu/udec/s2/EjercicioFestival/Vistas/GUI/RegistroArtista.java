@@ -308,9 +308,9 @@ public class RegistroArtista extends javax.swing.JDialog {
     }//GEN-LAST:event_botonEliminarActionPerformed
 
     public void limpiarCampos() {
-        campoNombre.setText(" ");
-        campoGeneroMusical.setText(" ");
-        campoNacionalidad.setText(" ");
+        campoNombre.setText("");
+        campoGeneroMusical.setText("");
+        campoNacionalidad.setText("");
         botonEditar.setEnabled(false);
         botonEliminar.setEnabled(false);
     }

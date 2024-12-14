@@ -304,9 +304,9 @@ public class RegistroFestival extends javax.swing.JDialog {
     }//GEN-LAST:event_botonEliminarActionPerformed
 
     public void limpiarCampos() {
-        campoNombre.setText(" ");
-        campoUbicacion.setText(" ");
-        campoFecha.setText(" ");
+        campoNombre.setText("");
+        campoUbicacion.setText("");
+        campoFecha.setText("");
         botonEditar.setEnabled(false);
         botonEliminar.setEnabled(false);
     }
