@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
- */
+
 package co.edu.udec.s2.EjercicioFestival.Vistas.GUI;
 
 import co.edu.udec.s2.EjercicioFestival.Domain.Model.Entidades.Concierto;

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package co.edu.udec.s2.EjercicioFestival.Vistas.GUI;
 
 /**
@@ -31,29 +28,14 @@ public class RegistroPrincipal extends javax.swing.JFrame {
         itemIngresarArtista = new javax.swing.JMenuItem();
         itemEditarArtista = new javax.swing.JMenuItem();
         itemConsultarArtista = new javax.swing.JMenuItem();
-        jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        itemReportesArtista = new javax.swing.JMenu();
-        itemReporteNombreArtista = new javax.swing.JMenuItem();
-        itemReporteGeneroMArtista = new javax.swing.JMenuItem();
-        itemReporteNacionalidadArtista = new javax.swing.JMenuItem();
         menuConcierto = new javax.swing.JMenu();
         itemIngresarConcierto = new javax.swing.JMenuItem();
         itemEditarConcierto = new javax.swing.JMenuItem();
         itemConsultarConcierto = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        itemReportesConcierto = new javax.swing.JMenu();
-        itemReporteNombreConcierto = new javax.swing.JMenuItem();
-        itemReporteDuracionConcierto = new javax.swing.JMenuItem();
-        itemReporteDuracionConcierto1 = new javax.swing.JMenuItem();
         menuFestival = new javax.swing.JMenu();
         itemIngresarFestival = new javax.swing.JMenuItem();
         itemEditarFestival = new javax.swing.JMenuItem();
         itemConsultarFestival = new javax.swing.JMenuItem();
-        jSeparator5 = new javax.swing.JPopupMenu.Separator();
-        itemReportesFestival = new javax.swing.JMenu();
-        itemReporteNombreFestival = new javax.swing.JMenuItem();
-        itemReporteUbicacionFestival = new javax.swing.JMenuItem();
-        itemReporteFechaFestival = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("- REGISTRO DE FESTIVAL -");
@@ -84,30 +66,6 @@ public class RegistroPrincipal extends javax.swing.JFrame {
             }
         });
         menuArtista.add(itemConsultarArtista);
-        menuArtista.add(jSeparator1);
-
-        itemReportesArtista.setText("Reportes");
-
-        itemReporteNombreArtista.setText("Nombres");
-        itemReporteNombreArtista.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemReporteNombreArtistaActionPerformed(evt);
-            }
-        });
-        itemReportesArtista.add(itemReporteNombreArtista);
-
-        itemReporteGeneroMArtista.setText("Genero musical");
-        itemReporteGeneroMArtista.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemReporteGeneroMArtistaActionPerformed(evt);
-            }
-        });
-        itemReportesArtista.add(itemReporteGeneroMArtista);
-
-        itemReporteNacionalidadArtista.setText("Nacionalidad");
-        itemReportesArtista.add(itemReporteNacionalidadArtista);
-
-        menuArtista.add(itemReportesArtista);
 
         jMenuBar1.add(menuArtista);
 
@@ -137,35 +95,6 @@ public class RegistroPrincipal extends javax.swing.JFrame {
             }
         });
         menuConcierto.add(itemConsultarConcierto);
-        menuConcierto.add(jSeparator2);
-
-        itemReportesConcierto.setText("Reportes");
-
-        itemReporteNombreConcierto.setText("Nombres");
-        itemReporteNombreConcierto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemReporteNombreConciertoActionPerformed(evt);
-            }
-        });
-        itemReportesConcierto.add(itemReporteNombreConcierto);
-
-        itemReporteDuracionConcierto.setText("Duracion");
-        itemReporteDuracionConcierto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemReporteDuracionConciertoActionPerformed(evt);
-            }
-        });
-        itemReportesConcierto.add(itemReporteDuracionConcierto);
-
-        itemReporteDuracionConcierto1.setText("Escenario");
-        itemReporteDuracionConcierto1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemReporteDuracionConcierto1ActionPerformed(evt);
-            }
-        });
-        itemReportesConcierto.add(itemReporteDuracionConcierto1);
-
-        menuConcierto.add(itemReportesConcierto);
 
         jMenuBar1.add(menuConcierto);
 
@@ -195,30 +124,6 @@ public class RegistroPrincipal extends javax.swing.JFrame {
             }
         });
         menuFestival.add(itemConsultarFestival);
-        menuFestival.add(jSeparator5);
-
-        itemReportesFestival.setText("Reportes");
-
-        itemReporteNombreFestival.setText("Nombres");
-        itemReporteNombreFestival.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemReporteNombreFestivalActionPerformed(evt);
-            }
-        });
-        itemReportesFestival.add(itemReporteNombreFestival);
-
-        itemReporteUbicacionFestival.setText("Ubicacion");
-        itemReporteUbicacionFestival.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemReporteUbicacionFestivalActionPerformed(evt);
-            }
-        });
-        itemReportesFestival.add(itemReporteUbicacionFestival);
-
-        itemReporteFechaFestival.setText("Fecha");
-        itemReportesFestival.add(itemReporteFechaFestival);
-
-        menuFestival.add(itemReportesFestival);
 
         jMenuBar1.add(menuFestival);
 
@@ -246,14 +151,6 @@ public class RegistroPrincipal extends javax.swing.JFrame {
         itemIngresarArtistaActionPerformed(evt);
     }//GEN-LAST:event_itemConsultarArtistaActionPerformed
 
-    private void itemReporteNombreArtistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemReporteNombreArtistaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemReporteNombreArtistaActionPerformed
-
-    private void itemReporteGeneroMArtistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemReporteGeneroMArtistaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemReporteGeneroMArtistaActionPerformed
-
     private void itemEditarConciertoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEditarConciertoActionPerformed
         itemIngresarConciertoActionPerformed(evt);
     }//GEN-LAST:event_itemEditarConciertoActionPerformed
@@ -261,14 +158,6 @@ public class RegistroPrincipal extends javax.swing.JFrame {
     private void itemConsultarConciertoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemConsultarConciertoActionPerformed
         itemIngresarConciertoActionPerformed(evt);
     }//GEN-LAST:event_itemConsultarConciertoActionPerformed
-
-    private void itemReporteNombreConciertoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemReporteNombreConciertoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemReporteNombreConciertoActionPerformed
-
-    private void itemReporteDuracionConciertoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemReporteDuracionConciertoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemReporteDuracionConciertoActionPerformed
 
     private void itemEditarFestivalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEditarFestivalActionPerformed
         itemIngresarFestivalActionPerformed(evt);
@@ -278,14 +167,6 @@ public class RegistroPrincipal extends javax.swing.JFrame {
         itemIngresarFestivalActionPerformed(evt);
 
     }//GEN-LAST:event_itemConsultarFestivalActionPerformed
-
-    private void itemReporteNombreFestivalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemReporteNombreFestivalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemReporteNombreFestivalActionPerformed
-
-    private void itemReporteUbicacionFestivalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemReporteUbicacionFestivalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemReporteUbicacionFestivalActionPerformed
 
     private void itemIngresarArtistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemIngresarArtistaActionPerformed
         RegistroArtista registro = new RegistroArtista(this, true);
@@ -310,10 +191,6 @@ public class RegistroPrincipal extends javax.swing.JFrame {
         
         registro.setVisible(true);
     }//GEN-LAST:event_itemIngresarFestivalActionPerformed
-
-    private void itemReporteDuracionConcierto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemReporteDuracionConcierto1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemReporteDuracionConcierto1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -361,22 +238,7 @@ public class RegistroPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemIngresarArtista;
     private javax.swing.JMenuItem itemIngresarConcierto;
     private javax.swing.JMenuItem itemIngresarFestival;
-    private javax.swing.JMenuItem itemReporteDuracionConcierto;
-    private javax.swing.JMenuItem itemReporteDuracionConcierto1;
-    private javax.swing.JMenuItem itemReporteFechaFestival;
-    private javax.swing.JMenuItem itemReporteGeneroMArtista;
-    private javax.swing.JMenuItem itemReporteNacionalidadArtista;
-    private javax.swing.JMenuItem itemReporteNombreArtista;
-    private javax.swing.JMenuItem itemReporteNombreConcierto;
-    private javax.swing.JMenuItem itemReporteNombreFestival;
-    private javax.swing.JMenuItem itemReporteUbicacionFestival;
-    private javax.swing.JMenu itemReportesArtista;
-    private javax.swing.JMenu itemReportesConcierto;
-    private javax.swing.JMenu itemReportesFestival;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JPopupMenu.Separator jSeparator2;
-    private javax.swing.JPopupMenu.Separator jSeparator5;
     private javax.swing.JMenu menuArtista;
     private javax.swing.JMenu menuConcierto;
     private javax.swing.JMenu menuFestival;
