@@ -4,12 +4,18 @@
  */
 package co.edu.udec.s2.EjercicioFestival.Vistas.GUI;
 
+import co.edu.udec.s2.EjercicioFestival.Domain.Model.Entidades.Concierto;
+import java.util.HashMap;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
  */
 public class RegistroConcierto extends javax.swing.JDialog {
 
+    Concierto concierto;
+    
     /**
      * Creates new form RegistroConcierto
      */
@@ -29,12 +35,17 @@ public class RegistroConcierto extends javax.swing.JDialog {
 
         jLabel1 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        textoNombre = new javax.swing.JLabel();
+        campoNombre = new javax.swing.JTextField();
+        textoDuracion = new javax.swing.JLabel();
+        campoDuracion = new javax.swing.JTextField();
+        campoEscenario = new javax.swing.JTextField();
+        textoEscenario = new javax.swing.JLabel();
+        botonCancelar = new javax.swing.JButton();
+        botonEliminar = new javax.swing.JButton();
+        botonGuardar = new javax.swing.JButton();
+        botonBuscar = new javax.swing.JButton();
+        botonEditar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("- CONCIERTO -");
@@ -45,70 +56,120 @@ public class RegistroConcierto extends javax.swing.JDialog {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.darkGray, java.awt.Color.lightGray));
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel14.setText("NOMBRE");
+        textoNombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        textoNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        textoNombre.setText("NOMBRE");
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel15.setText("DURACION");
+        textoDuracion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        textoDuracion.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        textoDuracion.setText("DURACION");
+
+        textoEscenario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        textoEscenario.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        textoEscenario.setText("ESCENARIO");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(textoEscenario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoEscenario, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(textoDuracion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(textoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(campoDuracion, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(campoNombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(37, 37, 37))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
+                .addGap(57, 57, 57)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoNombre)
+                    .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(90, Short.MAX_VALUE))
+                    .addComponent(textoDuracion)
+                    .addComponent(campoDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textoEscenario)
+                    .addComponent(campoEscenario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("CANCELAR");
+        botonCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/udec/s2/EjercicioFestival/Vistas/Iconos/cancelar48px.png"))); // NOI18N
+        botonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCancelarActionPerformed(evt);
+            }
+        });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("GUARDAR");
+        botonEliminar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/udec/s2/EjercicioFestival/Vistas/Iconos/eliminar48px.png"))); // NOI18N
+        botonEliminar.setEnabled(false);
+        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarActionPerformed(evt);
+            }
+        });
+
+        botonGuardar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/udec/s2/EjercicioFestival/Vistas/Iconos/guardar48px.png"))); // NOI18N
+        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarActionPerformed(evt);
+            }
+        });
+
+        botonBuscar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/udec/s2/EjercicioFestival/Vistas/Iconos/buscar48px.png"))); // NOI18N
+        botonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarActionPerformed(evt);
+            }
+        });
+
+        botonEditar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/udec/s2/EjercicioFestival/Vistas/Iconos/editar48px.png"))); // NOI18N
+        botonEditar.setEnabled(false);
+        botonEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEditarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 10, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(botonEliminar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonEditar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonBuscar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botonGuardar)))
+                .addGap(16, 16, 16))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,16 +178,140 @@ public class RegistroConcierto extends javax.swing.JDialog {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botonCancelar)
+                    .addComponent(botonEliminar)
+                    .addComponent(botonEditar)
+                    .addComponent(botonGuardar)
+                    .addComponent(botonBuscar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
+        int opcion = JOptionPane.showConfirmDialog(this, 
+                "¿Desea cerrar esta ventana?", 
+                "CONFIRMAR", JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE);
+        if(opcion == JOptionPane.YES_OPTION) {
+            this.dispose();
+        }
+    }//GEN-LAST:event_botonCancelarActionPerformed
+
+    private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
+        String nombre = campoNombre.getText();
+        String duracion = campoDuracion.getText();
+        String escenario = campoEscenario.getText();
+
+        Concierto concierto = new Concierto();
+        concierto.nombre = nombre;
+        concierto.duracion = duracion;
+        concierto.escenario = escenario;
+
+        if (Concierto.conciertoBD == null) {
+            Concierto.conciertoBD = new HashMap<String, Concierto>();
+        }
+        if (Concierto.conciertoBD.containsKey(nombre)) {
+            String msj = "Ya existe un concierto con ese nombre";
+            JOptionPane.showMessageDialog(this, msj);
+        }
+        else {
+            Concierto.conciertoBD.put(nombre, concierto);
+            int ConciertosIngresados = Concierto.conciertoBD.size();
+            String msj = "El Concierto fue guardado correctamente\n"
+            + "Existen " + ConciertosIngresados + " Conciertos";
+            JOptionPane.showMessageDialog(this, msj);
+            limpiarCampos();
+        }
+    }//GEN-LAST:event_botonGuardarActionPerformed
+
+    private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+        String nombre = campoNombre.getText();
+        
+        if(Concierto.conciertoBD == null || Concierto.conciertoBD.isEmpty()){
+            String msj = "No existen Conciertos en la Base de datos";
+            JOptionPane.showMessageDialog(this, msj);
+        }
+        else {
+            if(Concierto.conciertoBD.containsKey(nombre)){
+                this.concierto = Concierto.conciertoBD.get(nombre);
+                campoDuracion.setText(this.concierto.nombre);
+                campoNombre.setText(this.concierto.nombre);
+                campoDuracion.setText(this.concierto.duracion);
+                campoEscenario.setText(this.concierto.escenario);
+                botonEditar.setEnabled(true);
+                botonEliminar.setEnabled(true);
+            }
+            else{
+                String msj = "No existe un Artista de nombre "+nombre;
+                JOptionPane.showMessageDialog(this, msj);
+                limpiarCampos();
+            }
+        }
+    }//GEN-LAST:event_botonBuscarActionPerformed
+
+    private void botonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarActionPerformed
+        if(campoNombre.getText() == null || campoNombre.getText().isEmpty()) {
+           String msj = "Busque un concierto existente";
+                JOptionPane.showMessageDialog(this, msj);
+                limpiarCampos(); 
+                return;
+        }
+        if(campoNombre.getText().equals(this.concierto.nombre) != true){
+           String msj = "El nombre no coincide con el nombre del concierto consultado";
+                JOptionPane.showMessageDialog(this, msj);
+                limpiarCampos(); 
+                return; 
+        }
+        this.concierto = Concierto.conciertoBD.get(campoNombre.getText());
+        String nombre = campoNombre.getText();
+        String duracion = campoDuracion.getText();
+        String escenario = campoEscenario.getText();
+        
+        this.concierto.duracion = duracion;
+        this.concierto.escenario = escenario;
+        Concierto.conciertoBD.put(this.concierto.nombre, concierto);
+        String msj = "Concierto modificado correctamente";
+        JOptionPane.showMessageDialog(this, msj);
+    }//GEN-LAST:event_botonEditarActionPerformed
+
+    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+        if(campoNombre.getText() == null || campoNombre.getText().isEmpty()) {
+           String msj = "Busque un Concierto existente";
+                JOptionPane.showMessageDialog(this, msj);
+                limpiarCampos(); 
+                return;
+        }
+        if(campoNombre.getText().equals(this.concierto.nombre) != true){
+           String msj = "El nombre no coincide con el nombre del concierto consultado";
+                JOptionPane.showMessageDialog(this, msj);
+                limpiarCampos(); 
+                return; 
+        }
+        String msj = "¿Deseas eliminar este concierto?";
+        int respuesta = JOptionPane.showConfirmDialog(this, msj, 
+                "CONFIRMAR", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE);
+        if(respuesta == JOptionPane.YES_OPTION) {
+            Concierto.conciertoBD.remove(this.concierto.nombre);
+            int total = Concierto.conciertoBD.size();
+            String msj2 = "Concierto eliminado correctamente\nTOTAL: "+total;
+            JOptionPane.showMessageDialog(this, msj2);
+        }
+    }//GEN-LAST:event_botonEliminarActionPerformed
+
+    public void limpiarCampos() {
+        campoNombre.setText(" ");
+        campoDuracion.setText(" ");
+        campoEscenario.setText(" ");
+        botonEditar.setEnabled(false);
+        botonEliminar.setEnabled(false);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -170,41 +355,18 @@ public class RegistroConcierto extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton botonBuscar;
+    private javax.swing.JButton botonCancelar;
+    private javax.swing.JButton botonEditar;
+    private javax.swing.JButton botonEliminar;
+    private javax.swing.JButton botonGuardar;
+    private javax.swing.JTextField campoDuracion;
+    private javax.swing.JTextField campoEscenario;
+    private javax.swing.JTextField campoNombre;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel textoDuracion;
+    private javax.swing.JLabel textoEscenario;
+    private javax.swing.JLabel textoNombre;
     // End of variables declaration//GEN-END:variables
 }

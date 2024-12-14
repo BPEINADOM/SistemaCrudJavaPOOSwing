@@ -1,7 +1,8 @@
 
 package co.edu.udec.s2.EjercicioFestival.Domain.Model.Entidades;
 
-import java.util.Date;
+
+import java.util.HashMap;
 
 /**
  *
@@ -12,6 +13,8 @@ public class Festival {
     // PROPIEDADES
     public String nombre;
     public String ubicacion;
-    public Date fecha;
+    public String fecha;
+    
+    public static HashMap<String, Festival> festivalBD;
     
 }
