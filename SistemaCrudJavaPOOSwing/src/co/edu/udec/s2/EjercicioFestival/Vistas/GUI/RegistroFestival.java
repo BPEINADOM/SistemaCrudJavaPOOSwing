@@ -216,7 +216,7 @@ public class RegistroFestival extends javax.swing.JDialog {
         else {
             Festival.festivalBD.put(nombre, festival);
             int FestivalIngresados = Festival.festivalBD.size();
-            String msj = "El Artista fue guardado correctamente\n"
+            String msj = "El Festival fue guardado correctamente\n"
                     + "Existen " + FestivalIngresados + " Festivales";
             JOptionPane.showMessageDialog(this, msj);
             limpiarCampos();
@@ -287,7 +287,7 @@ public class RegistroFestival extends javax.swing.JDialog {
                 limpiarCampos(); 
                 return; 
         }
-        String msj = "¿Deseas eliminar este artista?";
+        String msj = "¿Deseas eliminar este festival?";
         int respuesta = JOptionPane.showConfirmDialog(this, msj, 
                 "CONFIRMAR", 
                 JOptionPane.YES_NO_OPTION, 
