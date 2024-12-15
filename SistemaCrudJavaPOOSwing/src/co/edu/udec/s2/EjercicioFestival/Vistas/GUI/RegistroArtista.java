@@ -246,8 +246,8 @@ public class RegistroArtista extends javax.swing.JDialog {
         if(campoNombre.getText() == null || campoNombre.getText().isEmpty()) {
            String msj = "Busque un usuario existente";
                 JOptionPane.showMessageDialog(this, msj);
-                limpiarCampos(); 
-                return;
+                limpiarCampos();
+                return; 
         }
         if(campoNombre.getText().equals(this.artista.nombre) != true){
            String msj = "El nombre no coincide con el nombre del artista consultado";

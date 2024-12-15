@@ -243,7 +243,7 @@ public class RegistroConcierto extends javax.swing.JDialog {
                 botonEliminar.setEnabled(true);
             }
             else{
-                String msj = "No existe un Artista de nombre "+nombre;
+                String msj = "No existe un Concierto de nombre "+nombre;
                 JOptionPane.showMessageDialog(this, msj);
                 limpiarCampos();
             }
